@@ -2,9 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Speech Robot</title>
+    <link rel="stylesheet" href="css/hum_movement.css">
 </head>
 <body>
+    <div class="container">
+        <h1>AI Speech Robot</h1>
 
+        <!-- File Upload -->
+        <input type="file" id="fileInput" accept=".txt,.doc,.docx,.pdf" />
+
+        <!-- Character Selection -->
+        <label for="character">Choose Character:</label>
+        <select id="character">
+            <option value="robot1">Robot 1 (Happy)</option>
+            <option value="robot2">Robot 2 (Sad)</option>
+            <option value="robot3">Robot 3 (Angry)</option>
+        </select>
+
+        <!-- Emotion Selection -->
+        <label for="emotion">Choose Emotion:</label>
+        <select id="emotion">
+            <option value="happy">Happy</option>
+            <option value="sad">Sad</option>
+            <option value="neutral">Neutral</option>
+        </select>
+
+        <!-- Play Button -->
+        <button id="playButton">Start Speech</button>
+
+        <!-- Display Uploaded Text -->
+        <div id="displayText"></div>
+
+        <!-- 3D Model Container -->
+        <div id="3DModel"></div>
+    </div>
+
+    <script src="javascript/hum_movement.js"></script>
 </body>
 </html>
