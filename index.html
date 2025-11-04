@@ -4,14 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Speech Robot</title>
-    <link rel="stylesheet" href="css/hum_movement.css">
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: sans-serif;
+        }
+        .custom-file-upload {
+            border: 1px solid #ccc;
+            display: inline-block;
+            padding: 6px 12px;
+            cursor: pointer;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        #displayText {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            min-height: 100px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>AI Speech Robot</h1>
+        <h1> AI Speech Robot</h1>
 
         <!-- File Upload -->
-        <input type="file" id="fileInput" accept=".txt,.doc,.docx,.pdf" />
+          <!-- File Upload -->
+        <label for="fileInput" class="custom-file-upload">Upload File</label>
+        <input type="file" id="fileInput" accept=".txt,.doc,.docx" style="display:none;" />
+        <label for="fileType">File Type:</label>
+        <select id="fileType">
+            <option value="txt">TXT</option>
+            <option value="doc">DOC</option>
+            <option value="docx">DOCX</option>
+        </select>
 
         <!-- Character Selection -->
         <label for="character">Choose Character:</label>
@@ -33,13 +63,18 @@
         <button id="playButton">Start Speech</button>
 
         <!-- Display Uploaded Text -->
-        <div id="displayText"></div>
+        <div id="displayText">
+            <p>No file uploaded</p>
+        </div>
 
-        <!-- 3D Model Container -->
-        <div id="3DModel"></div>
+        <!-- Response Message -->
+        <div id="response"></div>
+        <!-- 3D Model Container (Placeholder) -->
+        <!-- <div id="3DModel">
+            <p>3D Model Placeholder</p>
+        </div> -->
     </div>
 
-    <script src="javascript/hum_movement.js"></script>
-    <script src="javascript/threed.js"></script>
+    <script src="javascript/app-webai.js" type="module"></script>
 </body>
 </html>

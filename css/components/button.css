@@ -1,0 +1,22 @@
+button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Important: Include padding and border in the element's total width and height */
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #3e8e41;
+}
+button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
