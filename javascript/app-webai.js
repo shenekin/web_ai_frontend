@@ -9,7 +9,7 @@ import { speak } from './components/speech-synthesis.js';
     const characterSelect = getElement('character');
     const emotionSelect = getElement('emotion');
     const playButton = getElement('playButton');
-    const displayTextElement = getElement('displayText');
+
 
     let uploadedText = '';
 
@@ -28,10 +28,8 @@ import { speak } from './components/speech-synthesis.js';
             alert('Please upload a file first.');
             return;
         }
-
         const character = characterSelect.value;
         const emotion = emotionSelect.value;
-
         speak(uploadedText, character, emotion);
     });
 })();
