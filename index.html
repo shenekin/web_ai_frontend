@@ -41,42 +41,45 @@
             <option value="docx">DOCX</option>
         </select>
 
-        <!-- Character Selection -->
-        <label for="character">Choose Character:</label>
-        <select id="character">
-            <option value="robot1">Robot 1 (Happy)</option>
-            <option value="robot2">Robot 2 (Sad)</option>
-            <option value="robot3">Robot 3 (Angry)</option>
-        </select>
+<!--        &lt;!&ndash; Character Selection &ndash;&gt;-->
+<!--        <label for="character">Choose Character:</label>-->
+<!--        <select id="character">-->
+<!--            <option value="robot1">Robot 1 (Happy)</option>-->
+<!--            <option value="robot2">Robot 2 (Sad)</option>-->
+<!--            <option value="robot3">Robot 3 (Angry)</option>-->
+<!--        </select>-->
 
-        <!-- Emotion Selection -->
-        <label for="emotion">Choose Emotion:</label>
-        <select id="emotion">
-            <option value="happy">Happy</option>
-            <option value="sad">Sad</option>
-            <option value="neutral">Neutral</option>
-        </select>
+<!--        &lt;!&ndash; Emotion Selection &ndash;&gt;-->
+<!--        <label for="emotion">Choose Emotion:</label>-->
+<!--        <select id="emotion">-->
+<!--            <option value="happy">Happy</option>-->
+<!--            <option value="sad">Sad</option>-->
+<!--            <option value="neutral">Neutral</option>-->
+<!--        </select>-->
 
- <div class="audio-section" id="getAudioBtn">
+<div class="audio-section" id="getAudioBtn">
     <h2>Listen to the AI Robot Sound</h2>
-    <audio controls id="audioPlayer">
+    <audio controls id="audioPlayer" autoplay>
         <source id="audioSource" src="" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
 </div>
 
+<!--<button id="playButton">Play</button>-->
+
         <!-- Display Uploaded Text -->
         <div id="displayText">
             <p>No file uploaded</p>
         </div>
+<div id="progressContainer">
+    <div id="progressBar" style="width: 0%; height: 20px; background-color: green;"></div>
+    <p id="progressText">Uploading: 0%</p>
+</div>
+<div id="responseElement"></div>
 
         <!-- Response Message -->
         <div id="response"></div>
-        <!-- 3D Model Container (Placeholder) -->
-        <!-- <div id="3DModel">
-            <p>3D Model Placeholder</p>
-        </div> -->
-    </div>
+
 
     <script src="javascript/app-webai.js" type="module"></script>
 </body>
