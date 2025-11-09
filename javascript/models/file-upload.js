@@ -88,7 +88,11 @@ export function setupFileUpload(displayTextCallback) {
                 };
 
                 // Configure the request (POST to /upload)
-                xhr.open('POST', 'http://127.0.0.1:5000/upload', true);
+                const API_URL = 'http://119.8.188.101:5000/upload'; // Change to your server IP
+
+                xhr.open('POST', API_URL, true);
+
+                //xhr.open('POST', 'http://127.0.0.1:5000/upload', true);
 
                 // Send the FormData object with the file
                 xhr.send(formData);
